@@ -34,7 +34,7 @@ export default function Header() {
             alt="Claimify Logo"
             width={1400}
             height={1400}
-            className="rounded-lg h-24 w-full"
+            className="rounded-lg h-24 w-full object-cover"
           />
         </Link>
 
