@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import Link from "next/link";
+import MobileMenu from "./mobile-menu";
 
 export default function Header() {
   return (
@@ -22,6 +23,12 @@ export default function Header() {
             Services
           </Link>
           <Link
+            href="/about"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            About
+          </Link>
+          <Link
             href="#how-it-works"
             className="text-gray-600 hover:text-blue-600 transition-colors"
           >
@@ -33,11 +40,11 @@ export default function Header() {
           >
             Testimonials
           </Link>
-          <Button variant="outline" size="sm">
-            Login
-          </Button>
           <Button size="sm">Get Started</Button>
         </nav>
+
+        {/* Add mobile menu */}
+        <MobileMenu />
       </div>
     </header>
   );
