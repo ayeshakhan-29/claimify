@@ -15,9 +15,8 @@ export default function AboutHeroSection() {
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             About <span className="text-blue-600">Claimify</span>
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            We're on a mission to revolutionize medical billing, helping
-            healthcare providers focus on what they do best—caring for patients.
+          <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">
+            We&apos;re a team of healthcare and technology experts dedicated to simplifying medical billing and improving practice revenue cycles.
           </p>
           <div className="flex items-center justify-center space-x-12 text-center">
             <div>

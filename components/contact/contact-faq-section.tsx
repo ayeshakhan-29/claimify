@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "What are your pricing models?",
     answer:
-      "We offer transparent, percentage-based pricing with no setup fees or long-term contracts. Pricing varies based on your practice size and services needed. We'll provide a custom quote during your consultation.",
+      "We offer transparent, percentage-based pricing with no setup fees or long-term contracts. Pricing varies based on your practice size and services needed. We&apos;ll provide a custom quote during your consultation.",
   },
   {
     question: "How do you ensure HIPAA compliance?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Can I speak with current clients as references?",
     answer:
-      "We're happy to connect you with current clients in similar specialties who can share their experience working with Claimify. Just let us know during your consultation.",
+      "We&apos;re happy to connect you with current clients in similar specialties who can share their experience working with Claimify. Just let us know during your consultation.",
   },
 ];
 

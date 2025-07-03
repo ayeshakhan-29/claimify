@@ -27,7 +27,7 @@ export default function ContactHeroSection() {
           </h1>
 
           <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
-            Let's discuss how Claimify can optimize your revenue cycle, reduce
+            Let&apos;s discuss how Claimify can optimize your revenue cycle, reduce
             administrative burden, and help your practice thrive. Get your free
             consultation today.
           </p>

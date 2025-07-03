@@ -60,7 +60,7 @@ export default function OurStorySection() {
         <motion.div className="text-center mb-16" {...fadeInUp}>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From a simple idea to transform medical billing, we've grown into a
+            From a simple idea to transform medical billing, we&apos;ve grown into a
             trusted partner for hundreds of healthcare providers across the
             nation.
           </p>

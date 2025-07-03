@@ -1,12 +1,7 @@
 "use client";
 import { Target, Eye, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
+import Image from "next/image";
 
 export default function MissionVisionSection() {
   return (
@@ -95,20 +90,24 @@ export default function MissionVisionSection() {
                 Why We Started Claimify
               </h3>
               <blockquote className="text-lg italic leading-relaxed mb-6">
-                "After seeing countless healthcare providers struggle with
+                &ldquo;After seeing countless healthcare providers struggle with
                 billing inefficiencies, we knew there had to be a better way. We
                 founded Claimify to bridge the gap between healthcare excellence
-                and administrative efficiency."
+                and administrative efficiency.&rdquo;
               </blockquote>
               <div className="flex items-center space-x-4">
-                <img
-                  src="/placeholder.svg?height=60&width=60"
-                  alt="Founder"
-                  className="w-15 h-15 rounded-full border-2 border-white"
-                />
+                <div className="relative w-16 h-16 rounded-full border-2 border-white overflow-hidden">
+                  <Image
+                    src="/placeholder.svg"
+                    alt="Founder"
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold">Ali Bin Rashid, CEO</div>
-                  <div className="text-sm opacity-90">Business Owner </div>
+                  <div className="text-sm opacity-90">Business Owner</div>
                 </div>
               </div>
             </div>
