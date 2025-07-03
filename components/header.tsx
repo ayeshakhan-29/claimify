@@ -34,10 +34,9 @@ export default function Header() {
             alt="Claimify Logo"
             width={1400}
             height={1400}
-            className="rounded-lg h-24 w-full object-cover"
+            className="rounded-lg h-24 md:h-10 w-full object-cover"
           />
         </Link>
-
         <nav className="hidden md:flex items-center space-x-8">
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center text-gray-600 hover:text-blue-600 transition-colors focus:outline-none">
