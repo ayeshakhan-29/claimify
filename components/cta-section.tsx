@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -24,17 +25,25 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="px-8 py-6 text-lg">
-              Start Free Trial
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="px-8 py-6 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-            >
-              Schedule Consultation
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="px-8 py-6 text-lg"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+              >
+                Schedule Consultation
+              </Button>
+            </Link>
           </div>
 
           <div className="pt-8 border-t border-white/20">
