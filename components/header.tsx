@@ -1,27 +1,59 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { FileText, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import MobileMenu from "./mobile-menu";
+import MobileMenu from "@/components/mobile-menu";
+
+const serviceLinks = [
+  { name: "All Services", href: "/services" },
+  { name: "Medical Billing", href: "/services/medical-billing" },
+  { name: "Billing Audits", href: "/services/billing-audits" },
+  { name: "Revenue Cycle Management", href: "/services/revenue-cycle" },
+  { name: "Provider Credentialing", href: "/services/credentialing" },
+  { name: "Front Office Assistant", href: "/services/front-office" },
+  { name: "Chronic Care Management", href: "/services/chronic-care" },
+  { name: "Remote Patient Monitoring", href: "/services/remote-monitoring" },
+  { name: "Digital Marketing", href: "/services/digital-marketing" },
+];
 
 export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <FileText className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold text-gray-900">Claimify</span>
-        </div>
+        </Link>
+
         <nav className="hidden md:flex items-center space-x-8">
-          <Link
-            href="#services"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            Services
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center text-gray-600 hover:text-blue-600 transition-colors focus:outline-none">
+              Services
+              <ChevronDown className="ml-1 w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-64">
+              {serviceLinks.map((service, index) => (
+                <DropdownMenuItem key={index} asChild>
+                  <Link
+                    href={service.href}
+                    className="w-full px-3 py-2 text-sm hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link
             href="/about"
             className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -40,10 +72,18 @@ export default function Header() {
           >
             Testimonials
           </Link>
-          <Button size="sm">Get Started</Button>
+          <Link
+            href="/contact"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            Contact
+          </Link>
+          <Link href="/contact">
+            <Button size="sm">Get Started</Button>
+          </Link>
         </nav>
 
-        {/* Add mobile menu */}
+        {/* Mobile menu */}
         <MobileMenu />
       </div>
     </header>
