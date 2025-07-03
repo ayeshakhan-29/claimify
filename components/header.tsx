@@ -7,9 +7,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FileText, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import MobileMenu from "@/components/mobile-menu";
+import Image from "next/image";
 
 const serviceLinks = [
   { name: "All Services", href: "/services" },
@@ -27,11 +28,14 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <FileText className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold text-gray-900">Claimify</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Claimify Logo"
+            width={1400}
+            height={1400}
+            className="rounded-lg h-24 w-full"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
