@@ -58,19 +58,7 @@ export default function Header() {
             href="/about"
             className="text-gray-600 hover:text-blue-600 transition-colors"
           >
-            About
-          </Link>
-          <Link
-            href="#how-it-works"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            How It Works
-          </Link>
-          <Link
-            href="#testimonials"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            Testimonials
+            About Us
           </Link>
           <Link
             href="/contact"
@@ -78,8 +66,13 @@ export default function Header() {
           >
             Contact
           </Link>
-          <Link href="/contact">
-            <Button size="sm">Get Started</Button>
+          <Link href="/get-started">
+            <Button
+              size="sm"
+              className="bg-black cursor-pointer hover:bg-blue-700"
+            >
+              Get Started
+            </Button>
           </Link>
         </nav>
 

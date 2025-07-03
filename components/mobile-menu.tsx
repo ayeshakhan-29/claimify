@@ -80,21 +80,7 @@ export default function MobileMenu() {
                 className="block text-gray-600 hover:text-blue-600 transition-colors py-2"
                 onClick={closeMenu}
               >
-                About
-              </Link>
-              <Link
-                href="#how-it-works"
-                className="block text-gray-600 hover:text-blue-600 transition-colors py-2"
-                onClick={closeMenu}
-              >
-                How It Works
-              </Link>
-              <Link
-                href="#testimonials"
-                className="block text-gray-600 hover:text-blue-600 transition-colors py-2"
-                onClick={closeMenu}
-              >
-                Testimonials
+                About Us
               </Link>
               <Link
                 href="/contact"
@@ -104,7 +90,7 @@ export default function MobileMenu() {
                 Contact
               </Link>
               <div className="pt-4 border-t border-gray-100">
-                <Link href="/contact">
+                <Link href="/get-started">
                   <Button size="sm" className="w-full">
                     Get Started
                   </Button>
