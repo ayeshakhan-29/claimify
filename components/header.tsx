@@ -10,7 +10,6 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import MobileMenu from "@/components/mobile-menu";
-import Image from "next/image";
 
 const serviceLinks = [
   { name: "All Services", href: "/services" },
@@ -29,12 +28,10 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image
+          <img
             src="/logo.png"
             alt="Claimify Logo"
-            width={1400}
-            height={1400}
-            className="rounded-lg h-12 md:h-24 w-full object-cover"
+            className="rounded-lg h-20 md:h-24 w-full object-cover"
           />
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
